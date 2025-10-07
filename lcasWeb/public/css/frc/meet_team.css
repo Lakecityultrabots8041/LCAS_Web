@@ -1,0 +1,351 @@
+/**
+ * Lake City Ultrabots Team 8041 - Meet Team Page Styles
+ * MOBILE-FIRST APPROACH
+ */
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+/* ========================================== */
+/*     HERO SECTION STYLES (Meet Team Page)   */
+/* ========================================== */
+.hero-section {
+    width: 100%; height: 45vh; min-height: 300px; max-height: 450px;
+    position: relative; overflow: hidden; display: flex;
+    align-items: center; justify-content: center;
+    background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('../images/team/2025_Team.jpg');
+    background-size: cover; background-repeat: no-repeat; background-position: center 60%;
+}
+.hero-text-overlay {
+    position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    text-align: center; color: white; padding: 20px; z-index: 2;
+}
+.hero-text-overlay h1 {
+    font-size: 2rem; font-weight: bold; text-transform: uppercase;
+    margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.6); letter-spacing: 0.5px;
+}
+.hero-text-overlay p {
+    font-size: 1rem; line-height: 1.5; max-width: 90%; margin: 0 auto;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+/* ========================================== */
+/*      CONTENT SECTION SETTINGS              */
+/* ========================================== */
+.content-section { width: 100%; padding: 40px 0; position: relative; }
+.content-section .container { padding: 0 15px; }
+.alt-bg-white { background-color: #ffffff; }
+.alt-bg-light { background-color: var(--light); }
+.alt-bg-dark { background-color: var(--dark); color: white; }
+
+/* ========================================== */
+/*   ALTERNATING CONTENT                      */
+/* ========================================== */
+.alternating-content {
+    display: flex; flex-direction: column; align-items: center;
+    gap: 25px; text-align: center;
+}
+.content-image, .content-text { width: 100%; max-width: 500px; }
+.content-image img {
+    display: block; width: 100%; max-width: 450px; height: auto;
+    margin: 0 auto; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+.content-text { padding: 0 10px; }
+.content-text h2 {
+    color: var(--primary); font-size: 1.8rem; margin-top: 0;
+    margin-bottom: 15px; font-weight: bold;
+}
+.content-text p {
+    color: var(--dark); font-size: 0.95rem; line-height: 1.6; margin-bottom: 20px;
+}
+.content-text .btn { margin-top: 10px; }
+
+/* ========================================== */
+/*   CORE VALUES SHOWCASE (D.R.I.F.T.)        */
+/* ========================================== */
+.core-values-showcase { padding: 50px 0; position: relative; overflow: hidden; }
+.core-values-showcase.alt-bg-dark { background-color: var(--dark); color: white; }
+.core-values-showcase::before {
+    content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
+    background-image: repeating-linear-gradient(-30deg, rgba(255,255,255,0.02), rgba(255,255,255,0.02) 1px, transparent 1px, transparent 20px);
+    opacity: 0.4; z-index: 0;
+}
+.core-values-showcase .container { position: relative; z-index: 1; }
+.section-title-darkbg {
+    text-align: center; color: white; font-size: 1.8rem; font-weight: bold;
+    margin-bottom: 30px; text-transform: uppercase; letter-spacing: 0.5px;
+}
+.drift-values-container { /* Mobile: Stack D.R.I.F.T. items */
+    display: flex; flex-direction: column; align-items: stretch;
+    gap: 20px; max-width: 400px; margin: 0 auto;
+}
+.core-values-showcase .value-item {
+    flex-basis: auto;
+    background-color: rgba(255,255,255,0.06); padding: 20px 25px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.3); border-radius: 8px;
+    border-top: 4px solid var(--primary); color: #f0f0f0;
+    transition: background-color 0.3s ease, transform 0.3s ease; text-align: center;
+}
+.core-values-showcase .value-item:hover { background-color: rgba(255,255,255,0.1); transform: translateY(-4px); }
+.core-values-showcase .value-item h4 {
+    color: white; font-size: 1.3rem; margin-top: 0; margin-bottom: 10px; font-weight: 600;
+    display: flex; justify-content: center; align-items: baseline;
+}
+.drift-letter {
+    font-size: 1.8rem; color: var(--primary); margin-right: 6px;
+    font-weight: 700; line-height: 1;
+}
+.core-values-showcase .value-item p { color: #dcdcdc; font-size: 0.9rem; line-height: 1.5; margin: 0; }
+
+
+/* ========================================== */
+/*   SKILLS THROUGH THE SEASONS (POLAROIDS)   */
+/* ========================================== */
+.skills-polaroid-section {
+    padding: 40px 15px; position: relative; /* overflow: hidden; Removed to allow shadows of rotated cards */
+    background-color: #3a2f28; color: white; z-index: 1;
+    min-height: 450px; /* Ensure section has height for cards to sit in */
+}
+.skills-polaroid-section::before { /* Workbench Image */
+    content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    background-image: url('../images/backgrounds/workbench_photo.jpg');
+    background-repeat: no-repeat; background-size: cover; background-position: center center;
+    opacity: 0.1; z-index: -2;
+}
+.skills-polaroid-section::after { /* Darkening Overlay */
+    content: ''; position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+    background-color: rgba(30,20,15,0.7); z-index: -1;
+}
+.skills-polaroid-section .container { position: relative; z-index: 2; }
+.skills-polaroid-section .section-header { margin-bottom: 10px; text-align: center; }
+.skills-polaroid-section .section-header h2 { color: white; text-shadow: 1px 1px 2px rgba(0,0,0,0.5); }
+.skills-polaroid-section .section-header p { color: #e0e0e0; text-shadow: 1px 1px 2px rgba(0,0,0,0.3); }
+.polaroid-instruction {
+    font-size: 0.9rem; color: #ccc; margin-top: 5px; margin-bottom: 30px; text-align: center;
+}
+
+.polaroid-stack-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start; /* Align to top for varying card heights due to rotation */
+    gap: 5px; /* Minimal gap, transforms create overlap */
+    padding: 20px;
+    position: relative; /* For active card fixed positioning context later */
+    max-width: 500px; /* Mobile constraint */
+    margin: 20px auto;
+}
+
+.polaroid-card {
+    background: #fdfdfd; padding: 8px; padding-bottom: 8px; /* Base padding */
+    box-shadow: 3px 4px 8px rgba(0,0,0,0.25);
+    width: 150px; /* Mobile card width */
+    border-radius: 2px;
+    color: var(--dark);
+    cursor: pointer;
+    user-select: none;
+    display: flex; flex-direction: column;
+    transition: transform 0.35s ease-out, box-shadow 0.35s ease-out, opacity 0.3s ease-out;
+    position: relative; /* For normal flow within flex, and for ::before */
+    margin: 5px; /* Add some margin for better scatter */
+}
+
+/* Sticky Note - Top Left, Consistent */
+.polaroid-card::before {
+    content: attr(data-tag); position: absolute;
+    font-family: 'Permanent Marker', cursive; font-size: 0.7em; /* Smaller */
+    padding: 3px 5px; box-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    text-align: center; color: #111; z-index: 2;
+    border-radius: 2px;
+    top: -6px; left: -6px; /* Position */
+    transform: rotate(-8deg); /* Base rotation */
+    transition: transform 0.3s ease;
+}
+/* Sticky Note Colors */
+.polaroid-card[data-tag*="2025"]::before { background-color: #ffeb70; }
+.polaroid-card[data-tag*="2024"]::before { background-color: #ff9ff3; }
+.polaroid-card[data-tag*="2023"]::before { background-color: #feca57; }
+.polaroid-card[data-tag="Design"]::before { background-color: #7ed6df; }
+.polaroid-card[data-tag="Outreach"]::before { background-color: #badc58; }
+
+.polaroid-image {
+    background-color: #e0e0e0; margin-bottom: 6px; height: 120px; /* Mobile image height */
+    overflow: hidden; border: 1px solid #d0d0d0; width: 100%;
+}
+.polaroid-image img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.polaroid-caption {
+    text-align: center; font-family: 'Arial', sans-serif; font-size: 0.75rem;
+    color: #333; line-height: 1.2; padding: 0 3px;
+    margin-top: auto; margin-bottom: 3px;
+    overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+}
+.polaroid-caption p { margin: 0; font-weight: 600; }
+.polaroid-details {
+    font-size: 0.7rem; color: #444; line-height: 1.3;
+    max-height: 0; opacity: 0; overflow: hidden; /* Hidden by default */
+    transition: max-height 0.4s ease-out 0.15s, opacity 0.3s ease-out 0.15s; /* Slightly delayed reveal */
+    padding: 0 3px; margin-top: 3px;
+}
+.polaroid-details ul { list-style: disc; padding-left: 12px; margin: 0; }
+.polaroid-details ul li { margin-bottom: 1px; }
+
+.polaroid-close-btn {
+    position: absolute; top: 2px; right: 2px; /* Position inside active card's padding */
+    background: rgba(255,255,255,0.8); border: none; color: #444;
+    border-radius: 50%; width: 26px; height: 26px;
+    font-size: 18px; line-height: 26px; text-align: center; font-weight: bold;
+    cursor: pointer; opacity: 0; visibility: hidden;
+    transition: opacity 0.3s ease 0.3s, visibility 0s linear 0.6s, background-color 0.2s ease, color 0.2s ease;
+    z-index: 110;
+}
+.polaroid-close-btn:hover { background-color: rgba(200,0,0,0.9); color: white; }
+.polaroid-card.is-active .polaroid-close-btn { opacity: 1; visibility: visible; transition-delay: 0.4s, 0s; }
+
+/* Initial SCATTERED ROTATIONS & Z-INDEX (Mobile) */
+.polaroid-card:nth-child(5n+1) { transform: rotate(-5deg) translateY(-3px); z-index: 1; }
+.polaroid-card:nth-child(5n+2) { transform: rotate(3deg) translateX(2px) translateY(2px);  z-index: 2; }
+.polaroid-card:nth-child(5n+3) { transform: rotate(-2deg) translateY(4px);  z-index: 3; } /* More central */
+.polaroid-card:nth-child(5n+4) { transform: rotate(4deg) translateX(-2px) translateY(1px); z-index: 4; }
+.polaroid-card:nth-child(5n+5) { transform: rotate(-3deg) translateY(-4px); z-index: 5; }
+
+/* Specific FADE for cards (data-tag set in HTML) */
+.polaroid-card[data-tag="2023"],
+.polaroid-card[data-tag="Outreach"] {
+    opacity: 0.8; /* Initial subtle fade */
+}
+.polaroid-card[data-tag="2023"]:hover:not(.is-active), /* Full opacity on hover unless another is active */
+.polaroid-card[data-tag="Outreach"]:hover:not(.is-active) {
+    opacity: 1;
+}
+
+/* HOVER EFFECT: Straighten slightly, scale up image area, lift card */
+.polaroid-card:hover:not(.is-active) {
+    transform: rotate(0deg) scale(1.1) translateY(-5px); /* Straighten, slight scale & lift */
+    box-shadow: 0 10px 22px rgba(0,0,0,0.25);
+    z-index: 50 !important; /* Bring forward */
+    opacity: 1; /* Ensure full opacity */
+}
+.polaroid-card:hover:not(.is-active)::before { /* Straighten sticky note on hover */
+    transform: rotate(0deg) scale(1.05);
+}
+
+/* ACTIVE CARD STATE (Clicked - "Picked Up the Photo") */
+.polaroid-card.is-active {
+    position: fixed; /* Position relative to viewport */
+    left: 50%; top: 50%;
+    transform: translateX(-50%) translateY(-50%) scale(1) rotate(0deg) !important; /* Base for sizing */
+    width: 90vw; /* Take up most of viewport width */
+    max-width: 420px; /* Max width for active card on mobile */
+    min-height: 65vh; /* Ensure substantial height */
+    max-height: 85vh; /* Prevent overflow */
+    padding: 12px; /* Padding for content inside active card */
+    box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+    z-index: 1000 !important;
+    opacity: 1 !important;
+    overflow-y: auto; /* Scroll for content */
+    overflow-x: hidden;
+}
+.polaroid-card.is-active .polaroid-image {
+    height: 200px; /* Larger image when active */
+    margin-bottom: 10px;
+}
+.polaroid-card.is-active .polaroid-caption {
+    font-size: 1rem; /* Larger caption */
+    margin-top: 8px; margin-bottom: 8px;
+    white-space: normal; /* Allow wrap */
+}
+.polaroid-card.is-active .polaroid-details {
+    max-height: 250px; /* Allow more space, will scroll if needed */
+    opacity: 1;
+    font-size: 0.85rem; margin-top: 5px;
+}
+.polaroid-card.is-active::before { /* Sticky note on active card */
+    transform: rotate(0deg) scale(0.95); /* Straighten, slightly smaller relative to card */
+    top: 8px; left: 8px; /* Position inside padding */
+    font-size: 0.85em;
+}
+
+/* When one card is active, others are more subdued */
+.polaroid-stack-container.has-active-polaroid .polaroid-card:not(.is-active) {
+    opacity: 0.1; /* Fade back a lot */
+    /* filter: blur(3px); /* Stronger blur */
+    pointer-events: none; /* Prevent interaction with background cards */
+}
+/* No hover for non-active cards when one is active */
+.polaroid-stack-container.has-active-polaroid .polaroid-card:not(.is-active):hover {
+    opacity: 0.1; /* Keep faded */
+    transform: none; /* Reset any hover transform from general rule */
+    box-shadow: 2px 3px 5px rgba(0,0,0,0.2); /* Reset to base shadow */
+}
+
+.skills-outcome-summary {
+    text-align: center; font-size: 0.9rem; color: #e0e0e0;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.4);
+    line-height: 1.6; max-width: 90%;
+    margin: 50px auto 0 auto; padding-top: 15px;
+    border-top: 1px solid rgba(255,255,255,0.15);
+}
+
+
+/* === RESPONSIVE OVERRIDES (TABLET AND UP) === */
+@media (min-width: 769px) {
+    /* --- HERO --- */
+    .hero-section { height: 55vh; min-height: 350px; max-height: 600px; background-position: center 54%; }
+    .hero-text-overlay h1 { font-size: 3rem; } .hero-text-overlay p { font-size: 1.2rem; }
+    /* --- CONTENT --- */
+    .content-section { padding: 70px 0; }
+    .alternating-content { flex-direction: row; text-align: left; gap: 50px; }
+    .content-image, .content-text { max-width: none; flex: 1; }
+    .content-text { padding: 0; text-align: left; }
+    .image-right .content-image { order: 2; } .image-right .content-text { order: 1; }
+    .content-text h2 { font-size: 2.1rem; } .content-text p { font-size: 1.1rem; }
+    /* --- D.R.I.F.T --- */
+    .core-values-showcase { padding: 70px 0; }
+    .section-title-darkbg { font-size: 2.2rem; }
+    .drift-values-container { flex-direction: row; gap: 25px; max-width: 1150px; }
+    .core-values-showcase .value-item { flex: 1 1 200px; min-width: 180px; max-width: 280px; padding: 25px 30px; }
+    .core-values-showcase .value-item h4 { font-size: 1.5rem; } .drift-letter { font-size: 2rem; }
+    .core-values-showcase .value-item p { font-size: 0.95rem; }
+
+    /* --- POLAROIDS (Desktop) --- */
+    .polaroid-instruction { font-size: 1rem; margin-bottom: 50px; }
+    .polaroid-stack-container { height: 500px; max-width: 800px; gap: 15px; padding: 30px; margin-top: 30px; }
+    .polaroid-card { width: 210px; padding: 10px; padding-bottom: 10px;}
+    .polaroid-image { height: 170px; }
+    .polaroid-caption { font-size: 0.9rem; }
+    .polaroid-details { font-size: 0.8rem; }
+    .polaroid-card::before { font-size: 0.85em; padding: 4px 7px; top: -7px; left: -7px; }
+    .polaroid-close-btn { font-size: 22px; width: 30px; height: 30px; line-height: 30px; top: 5px; right: 5px;}
+
+    /* Initial SCATTER (Desktop) - More spread out */
+    .polaroid-card:nth-child(5n+1) { transform: rotate(-8deg) translateX(-60px) translateY(10px); z-index: 1;}
+    .polaroid-card:nth-child(5n+2) { transform: rotate(6deg)  translateX(30px) translateY(-15px); z-index: 2;}
+    .polaroid-card:nth-child(5n+3) { transform: rotate(-3deg) translateX(-20px) translateY(20px); z-index: 3;}
+    .polaroid-card:nth-child(5n+4) { transform: rotate(7deg)  translateX(55px) translateY(5px);  z-index: 4;}
+    .polaroid-card:nth-child(5n+5) { transform: rotate(-6deg) translateX(-45px) translateY(-20px);z-index: 5;}
+
+    .polaroid-card:hover:not(.is-active) {
+        transform: rotate(0deg) scale(1.15) translateY(-10px);
+    }
+    .polaroid-card.is-active {
+        max-width: 600px; /* Max width for zoomed card on desktop */
+        min-height: 75vh;
+        padding: 20px;
+    }
+    .polaroid-card.is-active .polaroid-image { height: 280px; }
+    .polaroid-card.is-active .polaroid-caption { font-size: 1.2rem; }
+    .polaroid-card.is-active .polaroid-details { max-height: none; font-size: 0.95rem; } /* Allow full scroll */
+    .polaroid-card.is-active::before { font-size: 1em; padding: 6px 10px; top: 12px; left: 12px; }
+
+    .skills-outcome-summary { font-size: 1.05rem; margin-top: 60px; }
+}
+
+@media (min-width: 1200px) {
+    .polaroid-stack-container { max-width: 900px; height: 550px; }
+    .polaroid-card { width: 230px; }
+    .polaroid-image { height: 190px; }
+    .polaroid-card.is-active { max-width: 700px; }
+    .polaroid-card.is-active .polaroid-image { height: 300px; }
+    .polaroid-card.is-active .polaroid-caption { font-size: 1.3rem; }
+    .polaroid-card.is-active .polaroid-details { font-size: 1rem; }
+    .polaroid-card.is-active::before { top: 15px; left: 15px; }
+}

@@ -1,0 +1,181 @@
+/* ========================================== */
+/*    TEAM STRUCTURE INFO CARDS (New Style)   */
+/* ========================================== */
+
+/* --- The Grid (can reuse .role-grid or rename) --- */
+.role-grid { /* Or your chosen grid class name */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* --- The New Info Card --- */
+.info-card {
+    position: relative;
+    aspect-ratio: 4/5; /* Adjust as needed, might need to be taller for more text */
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: default; /* No longer a flip, so pointer might be misleading unless clicking does something */
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+.info-card-img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.info-card:hover .info-card-img {
+    transform: scale(1.05); /* Subtle zoom on image */
+}
+
+.info-card-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.7) 60%, rgba(0,0,0,0) 100%);
+    color: #ffffff;
+    padding: 20px;
+    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* Changed to transform for smoother height change */
+    
+    /* Initial state: overlay is only partially visible */
+    height: auto; /* Let content dictate initial height of text area */
+    max-height: 35%; /* Adjust this percentage to control how much is initially shown */
+    overflow: hidden; /* Clip the overflowing detailed content */
+}
+
+
+.info-card:hover .info-card-overlay {
+    /* Expanded state: overlay covers more */
+    max-height: 80%; /* Adjust to how much you want it to cover on hover */
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.75) 100%); /* Darken slightly on hover for text pop */
+}
+
+
+.info-card-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary); /* Use your theme's primary color */
+    margin: 0 0 8px 0;
+    line-height: 1.2;
+}
+
+.info-card-content {
+    /* This div helps manage the detailed text visibility */
+    position: relative;
+}
+
+.info-card-teaser {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    margin-bottom: 12px;
+    opacity: 1;
+    transition: opacity 0.2s ease;
+}
+
+.info-card:hover .info-card-teaser {
+    opacity: 0; /* Fade out teaser to make space for details */
+    max-height: 0; /* Collapse teaser */
+    margin-bottom: 0;
+}
+
+
+.info-card-details {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    opacity: 0;
+    max-height: 0; /* Initially hidden and takes no space */
+    overflow: hidden; /* Important */
+    transition: opacity 0.3s ease 0.1s, max-height 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94) 0.1s; /* Delay appearance */
+    /* For scrolling if content is very long, but aim to fit */
+    /* overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary) rgba(255,255,255,0.2); */
+}
+.info-card-details::-webkit-scrollbar { width: 5px; }
+.info-card-details::-webkit-scrollbar-thumb { background-color: var(--primary); border-radius: 3px;}
+.info-card-details::-webkit-scrollbar-track { background-color: rgba(255,255,255,0.1); }
+
+
+.info-card:hover .info-card-details {
+    opacity: 1;
+    max-height: 300px; /* Adjust to accommodate your longest content. Or use JS to calculate height */
+}
+
+.info-card-details h4 {
+    font-size: 1rem;
+    color: var(--primary);
+    margin-top: 5px;
+    margin-bottom: 8px;
+}
+.info-card-details ul {
+    list-style-position: outside;
+    padding-left: 18px;
+    margin-top: 5px;
+}
+.info-card-details ul li {
+    margin-bottom: 4px;
+}
+.info-card-details em {
+    font-size: 0.8rem;
+    opacity: 0.8;
+    display: block;
+    margin-top: 10px;
+}
+
+
+/* ============================ */
+/* RESPONSIVE ADJUSTMENTS (Info Cards) */
+/* ============================ */
+@media (max-width: 992px) {
+    .role-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns earlier */
+        gap: 25px;
+    }
+    .info-card {
+        aspect-ratio: 3/4; /* Might need adjustment */
+    }
+    .info-card-title { font-size: 1.3rem; }
+    .info-card-teaser { font-size: 0.85rem; }
+    .info-card-details { font-size: 0.8rem; }
+    .info-card-overlay { max-height: 40%; } /* Initial overlay height for tablet */
+    .info-card:hover .info-card-overlay { max-height: 85%; } /* Hover overlay height for tablet */
+}
+
+@media (max-width: 768px) {
+    .info-card-overlay { padding: 15px; }
+}
+
+@media (max-width: 576px) {
+    .role-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .info-card {
+        aspect-ratio: 5/6; /* Taller for single column */
+        max-width: 90%;
+        margin: 0 auto;
+    }
+    .info-card-title { font-size: 1.25rem; }
+    .info-card-overlay { max-height: 38%; } /* Initial overlay height for mobile */
+    .info-card:hover .info-card-overlay { max-height: 75%; } /* Hover overlay height for mobile */
+}

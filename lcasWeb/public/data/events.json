@@ -1,0 +1,20 @@
+{
+  "events": [
+    {
+      "title": "2025-Summer Build Season",
+      "date": "2026-00-03",
+      "time": "5:30 PM - 8:00 PM",
+      "location": "Robotics Room",
+      "description": "Summer Season Build(See Mr. Mason for details)",
+      "type": "meeting"
+    },
+    {
+      "title": "2026-2027 Season Kickoff",
+      "date": "2026-00-10",
+      "time": "3:30 PM - 5:30 PM",
+      "location": "Mr.Mason’s Room",
+      "description": "First meeting of the new season. Introduction to the new game and planning session.",
+      "type": "meeting"
+    }
+  ]
+}

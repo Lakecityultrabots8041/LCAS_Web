@@ -1,0 +1,9 @@
+
+[
+  {
+    "title": "Important Reminder",
+    "message": "Permission slips for the upcoming competition are due this Friday!",
+    "urgent": true,
+    "id": "1"
+  }
+]

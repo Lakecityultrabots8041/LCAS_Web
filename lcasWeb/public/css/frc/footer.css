@@ -1,0 +1,358 @@
+/**
+ * FRC FOOTER STYLES - SHARED ACROSS ALL FRC PAGES
+ * Lake City Ultrabots Team 8041
+ * RELIES ON VARIABLES FROM styles.css
+ */
+
+/* ==============================
+   FRC FOOTER STYLES
+============================== */
+
+/* FRC page footer - high school focused */
+.frc-page footer {
+  background-color: var(--secondary);
+  color: white;
+  padding: 0;
+  margin-top: 0;
+}
+
+.frc-page .footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 50px 20px 30px 20px;
+}
+
+/* Header Section - FRC Branding */
+.frc-page .footer-header {
+  text-align: center;
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.frc-page .footer-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 15px;
+  letter-spacing: -0.5px;
+}
+
+.frc-page .footer-subtitle {
+  font-size: 1.1rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 30px;
+  line-height: 1.6;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* FRC Call-to-Action Button */
+.frc-page .footer-cta-buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.frc-page .footer-cta-btn {
+  display: inline-block;
+  padding: 15px 40px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  text-align: center;
+  cursor: pointer;
+  background: transparent;
+  color: white;
+  border: 2px solid white;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.1);
+}
+
+.frc-page .footer-cta-btn:hover {
+  background: white;
+  color: var(--secondary);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(255, 255, 255, 0.3);
+}
+
+/* Main Content Grid - More Complex for FRC */
+.frc-page .footer-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+/* Navigation Section - FRC Specific */
+.frc-page .footer-nav-section {
+  text-align: center;
+}
+
+.frc-page .footer-nav-section h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.frc-page .footer-nav-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.frc-page .footer-nav-column h4 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.frc-page .footer-nav-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.frc-page .footer-nav-list li {
+  margin-bottom: 8px;
+}
+
+.frc-page .footer-nav-list a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  padding: 4px 0;
+  display: block;
+}
+
+.frc-page .footer-nav-list a:hover {
+  color: var(--primary);
+  padding-left: 10px;
+  transform: translateX(5px);
+}
+
+/* Special Blue Alliance Section */
+.frc-page .blue-alliance-section {
+  background: rgba(52, 152, 219, 0.1);
+  border: 1px solid rgba(52, 152, 219, 0.3);
+  border-radius: 8px;
+  padding: 20px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.frc-page .blue-alliance-section h4 {
+  color: #3498db;
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.frc-page .blue-alliance-link {
+  display: inline-block;
+  color: #3498db;
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 10px 20px;
+  border: 1px solid #3498db;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.frc-page .blue-alliance-link:hover {
+  background: #3498db;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(52, 152, 219, 0.3);
+}
+
+/* Contact Section */
+.frc-page .footer-contact-section {
+  text-align: center;
+}
+
+.frc-page .footer-contact-section h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: white;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.frc-page .footer-contact-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.frc-page .footer-contact-item {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transition: all 0.3s ease;
+}
+
+.frc-page .footer-contact-item:hover {
+  color: var(--primary);
+  transform: translateX(5px);
+}
+
+.frc-page .footer-contact-item a {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.frc-page .footer-contact-item a:hover {
+  color: var(--primary);
+}
+
+/* Bottom Section */
+.frc-page .footer-bottom {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding-top: 30px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  margin-top: 30px;
+}
+
+.frc-page .footer-logo {
+  max-width: 120px;
+  height: auto;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+
+.frc-page .footer-logo:hover {
+  opacity: 1;
+}
+
+.frc-page .footer-credits {
+  text-align: center;
+}
+
+.frc-page .footer-credits p {
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.85rem;
+  margin-bottom: 8px;
+}
+
+.frc-page .footer-credits a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-size: 0.85rem;
+  transition: color 0.3s ease;
+}
+
+.frc-page .footer-credits a:hover {
+  color: var(--primary);
+}
+
+/* Team Number Badge */
+.frc-page .team-badge {
+  background: var(--primary);
+  color: white;
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  margin-top: 10px;
+  display: inline-block;
+}
+
+/* Overview Link */
+.ftc-page .overview-link,
+.frc-page .overview-link {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.ftc-page .overview-link a,
+.frc-page .overview-link a {
+  color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.ftc-page .overview-link a:hover,
+.frc-page .overview-link a:hover {
+  color: white;
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+
+/* ==============================
+   FRC FOOTER RESPONSIVE
+============================== */
+
+@media (min-width: 768px) {
+  .frc-page .footer-content {
+    grid-template-columns: 2fr 1fr;
+    text-align: left;
+  }
+
+  .frc-page .footer-nav-section {
+    text-align: left;
+  }
+
+  .frc-page .footer-contact-section {
+    text-align: left;
+  }
+
+  .frc-page .footer-contact-info {
+    align-items: flex-start;
+  }
+
+  .frc-page .footer-bottom {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .frc-page .footer-credits {
+    text-align: right;
+  }
+
+  .frc-page .blue-alliance-section {
+    text-align: left;
+  }
+}
+
+@media (min-width: 1024px) {
+  .frc-page .footer-title {
+    font-size: 3rem;
+  }
+
+  .frc-page .footer-nav-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
