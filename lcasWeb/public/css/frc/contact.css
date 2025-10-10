@@ -4,6 +4,8 @@
 /*          BASE STYLES (MOBILE)              */
 /* ========================================== */
 
+/* Reset some default styles */
+
 .contact-main-section {
     background-color: #f4f7f6;
     padding: 40px 15px; /* Mobile padding */
